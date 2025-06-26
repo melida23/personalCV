@@ -1,110 +1,147 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   
-
-   <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/f43e40c2e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
-        <div class="container"> 
+        <div class="container">
             <nav>
-              
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
             <div class="header-text">
-                <p>Aspiring AI Engeener</p>
-                <h1>Hi, I'm <span>Melida</span>,<br> currently based in Tembisa and originally from Ga-Molepo, Limpopo.</h1>
+                <p>Aspiring AI Engineer</p>
+                <h1>Hi, I'm <span>Melida</span>,<br />currently based in Tembisa and originally from Ga-Molepo, Limpopo.</h1>
+            </div>
         </div>
     </div>
+
     <!----------------------about--------------->
+
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                   <img src="images/my pic.jpg">
+                    <img src="my pic.jpg" alt="Melida's photo" />
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title"> About Me</h1>
-                    <p>I’m Melida, an enthusiastic AI candidate at Capaciti, building on a strong foundation in IT Networking with a diploma qualification and hands-on experience as an IT Technician. My journey into the world of Artificial Intelligence has been fueled by curiosity and a drive to solve real-world problems using technology.</p>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I’m Melida, an enthusiastic AI candidate at Capaciti, building on a strong foundation in IT Networking with a diploma qualification and hands-on experience as an IT Technician. My journey into the world of Artificial Intelligence has been fueled by curiosity and a drive to solve real-world problems using technology.
+                    </p>
+
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experince</p>
-                        <p class="tab-links">Education</p>
-
-                    </didv>
-                    <div class="tab-contents">
-                        <ul>
-                            <li><span>IT Technician</span><br>hardware/software setup, network support, maintenance, troubleshooting, and customer assistance.</li>
-                            <li><span>AI Candidate</span><br>Built AI chatbots and tools using no-code platforms.<br> </li>
-                            
-        
-                        </ul>
-
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
-                        <ul>
-                            <li><span>April 2025-Present</span><br>AI Candidate at Capaciti.<br> </li>
-                            <li><span>Feb 2024-Jan 2025 </span><br>IT Technician Intern at Gauteng Department of Education</li>
-                            <li><span>July 2023-December 2023</span><br>Customer Support Intern at Njinjicom<br> </li>
-                            
-        
-                        </ul>
 
-                    </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>2019-2025</span><br>National Diploma in Information Technology at Tshwane University of Technology</li>
-                            <li><span>2012-2016</span><br>National Senoir Certificate at St Bede's High School.<br> </li>
-                            
-        
+                            <li><span>IT Technician</span><br />hardware/software setup, network support, maintenance, troubleshooting, and customer assistance.</li>
+                            <li><span>AI Candidate</span><br />Built AI chatbots and tools using no-code platforms.</li>
                         </ul>
-
                     </div>
-                    
+
+                    <div id="experience" class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>April 2025 - Present</span><br />AI Candidate at Capaciti.</li>
+                            <li><span>Feb 2024 - Jan 2025</span><br />IT Technician Intern at Gauteng Department of Education.</li>
+                            <li><span>July 2023 - Dec 2023</span><br />Customer Support Intern at Njinjicom.</li>
+                        </ul>
+                    </div>
+
+                    <div id="education" class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019 - 2025</span><br />National Diploma in Information Technology at Tshwane University of Technology.</li>
+                            <li><span>2012 - 2016</span><br />National Senior Certificate at St Bede's High School.</li>
+                        </ul>
+                    </div>
                 </div>
-                    
             </div>
-            
         </div>
-
     </div>
-</body>      
+    <!----------------------services--------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+
+            <div class="services-list">
+               <div>
+                      <i class="fa fa-laptop"></i>
+                    <h2>Web Development</h2>    
+                    <p>Creating responsive and user-friendly websites using HTML, CSS, and JavaScript.</p>
+                      <a href="#">Learn more    </a>
+                </div>
+               <!----------PORTFOLIO---------------> 
+                   <div id="portfolio">
+                    <div class="container">
+                        <h1 class="sub-title">My Projects</h1>
+                        <div class="portfolio-list">
+                            <div class="portfolio-item">
+                                <img src="project1.jpg" alt="Project 1" />
+                                <div class="layer">
+                                    <h3>
+                                        
+                                        <i class="fa fa-robot"></i>
+                                    </h3>
+                                </div>
+                                <h3>AI Chatbot</h3>
+                                <p>A chatbot built using no-code platforms to assist users with common queries.</p>
+                            </div>
+                            <div class="portfolio-item">
+                                <div class="layer">
+                                    <h3>
+                                    
+                                        <i class="fa fa-briefcase"></i>
+                                    </h3>
+                                </div>
+                                <img src="Portfoliocv.PNG" alt="Project 2" />
+                                <h3>Portfolio Website</h3>
+                                <p>A personal portfolio website showcasing my skills and projects.</p>
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="Screenshot (44).png" alt="Project 3" />
+                                <div class="layer">
+                                    <h3>
+                                    
+                                        <i class="fa fa-chart-line"></i>
+                                    </h3>
+                                </div>
+                                <h3>AI Sentimetal Analysis Dashboard</h3>
+                                <p>A web-based dashboard that uses AI to analyze and visualize the sentiment of text data. It detects whether input is positive, negative, or neutral</p>
+                            </div>
+                        </div>
+                    </div>
+                   </div> 
+                
+            </div>
+        </div>
+    <script>
+        // Simple tab switching script
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
