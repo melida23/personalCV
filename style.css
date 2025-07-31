@@ -88,12 +88,13 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-
-/* Header text */
 .header-text {
   margin-top: 20%;
   font-size: 30px;
   max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .header-text h1 {
