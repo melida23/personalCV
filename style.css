@@ -507,3 +507,7 @@ form .btn2:focus {
   text-decoration: none;              /* no underline on hover */
   cursor: pointer;                   /* pointer cursor on hover */
 }
+html {
+  scroll-behavior: smooth;
+}
+
