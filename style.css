@@ -1,9 +1,9 @@
 /* Define color variables */
 :root {
-  --color-bg-dark: #16173f;
-  --color-bg-section: #1e1f44;
-  --color-bg-card: #2c2f63;
-  --color-bg-hover: #3b3f7f;
+  --color-bg-dark: black;
+  --color-bg-section: #13131f;
+  --color-bg-card: #13131f;
+  --color-bg-hover: #13131f;
 
   --color-text-primary: #fff;
   --color-text-secondary: #ababab;
@@ -506,4 +506,29 @@ form .btn2:focus {
   color: var(--color-text-primary);  /* keep white on hover */
   text-decoration: none;              /* no underline on hover */
   cursor: pointer;                   /* pointer cursor on hover */
+}
+.header-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-text {
+  flex: 1;
+  min-width: 250px;
+  margin-right: 20px;
+}
+
+.header-image img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
