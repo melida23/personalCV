@@ -23,7 +23,7 @@
       </nav>
       <div class="header-text">
         <p>Aspiring AI Engineer</p>
-        <h1>Hi, I'm <span>Melida</span>,an Artificial Intelligence Candidate actively developing skills to create innovative AI solutions that solve real-world problems.</h1>
+        <h1>Hi, I'm <span>Melida</span>,an Artificial Intelligence Candidate <br>actively developing skills to create innovative AI solutions that solve real-world problems.</h1>
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
           </p>
 
           <div class="tab-titles">
-            <span id="skills"></span>
+            <span id="skills-anchor"></span>
 
             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
             <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -52,7 +52,7 @@
 
           <div class="tab-contents active-tab" id="skills">
             <ul>
-                <li><span>AI Candidate</span><br />Currently developing AI skills in machine learning, data analysis, and Python programming, working on hands-on projects with AI models, gaining experience with frameworks like TensorFlow and Scikit-learn, expanding knowledge in neural networks and natural language processing, actively applying concepts through practical projects.</li>
+                <li><span>AI Candidate</span><br />Currently developing AI skills in machine learning, data analysis, and Python programming, working on hands-on projects with AI models, gaining experience with frameworks like  Scikit-learn and Hugging face transformers, expanding knowledge in neural networks and natural language processing, actively applying concepts through practical projects.</li>
               <li><span>IT Technician</span><br />hardware/software setup, network support, maintenance, troubleshooting, and customer assistance.</li>
               
             </ul>
@@ -96,6 +96,14 @@
       <div class="certificate-item">
         <h3>Microsoft Azure Fundamentals</h3>
         <p>Issued on November 2023</p>
+      </div>
+      <div class="certificate-item">
+        <h3>Introduction to Artificial Intelligence(IBM)</h3>
+        <p>Issued by Cousera |June 2025 </p>
+      </div>
+       <div class="certificate-item">
+        <h3>Python for Data Science,AI&Dveleopment</h3>
+        <p>Issued by Cousera |June 2025 </p>
       </div>
     </div>
   </div>
@@ -166,10 +174,11 @@
           <a href="Lehlokoa_CV.pdf" download class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
-          <form>
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+          <form id="contact-form">
+               <input type="text" name="from_name" placeholder="Your Name" required />
+               <input type="email" name="from_email" placeholder="Your Email" required />
+               <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
             <button type="submit" class="btn btn2">Submit</button>
           </form>
         </div>
@@ -192,5 +201,25 @@
       document.getElementById(tabname).classList.add("active-tab");
     }
   </script>
+  <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("VrFZdngpFiqx2WsPZ") })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_1yd75ds", "template_dsfwuxk", this)
+      .then(function() {
+        alert("✅ Email sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        alert("❌ Failed to send email: " + JSON.stringify(error));
+      });
+  });
+</script>
+
 </body>
 </html>
